@@ -3,10 +3,10 @@ const shoppingListEl = $("#shopping-list");
 const userInput = $("#shopping-input");
 
 // TODO: Create a function to handle the form submission event that captures the form's `<input>` value and prints it to the `shoppingListEl` as a `<li>`
-const submission = () => {
+const submission = (event) => {
   event.preventDefault();
   $("<li>").appendTo(shoppingListEl).text(userInput.val());
-  userInput.val("");
+  userInput.val(""); // Clears input ready for next input
 };
 
 // TODO: Add an event listener to the `shoppingFormEl` to handle submission
